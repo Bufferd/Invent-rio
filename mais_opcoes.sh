@@ -76,8 +76,8 @@ VALUES=$(dialog --ok-label "Entrar"             \
          --title "Login"                         \
          --form "Inventário"                     \
          15 50 0                                 \
-         "Email     :" 1 1 "" 1 10 40 0             \
-         "Mensagem  :" 2 1 "" 2 10 40 0             \
+         "Email     :" 1 1 "" 1 10 64 0             \
+         "Mensagem  :" 2 1 "" 2 10 1000 0             \
          2>&1 1>&3)
 
          if [[ $? == 1 ]]
