@@ -30,6 +30,7 @@ VALUES=$(dialog --ok-label "Cadastrar"                                          
                                          echo "Good-bye..."
                                         exit 0
                  fi
+	fi
 #################################################################################
 exec 3>&-
  
