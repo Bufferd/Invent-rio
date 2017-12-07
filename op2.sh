@@ -88,6 +88,8 @@ if [[ $SENHA == "" ]]
 				--title 'Erro'			\
 				--msgbox 'Senha inválida'	\
 				0 0
+
+			opcao $1
 fi
 
  
