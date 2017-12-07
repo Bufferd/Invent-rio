@@ -132,7 +132,7 @@ sendemail -l logemail -f "bufferd132@gmail.com"         \
                  --msgbox "Email enviado!\nAguarde o nosso contato"      \
                  0 0
  
-          mais_opcoes $1
+          mais_opcoes $2 #Alterei aqui para $2
 
 
 

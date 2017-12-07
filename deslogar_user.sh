@@ -29,16 +29,41 @@ fi
 		then
 			OP=21
 			source log.sh $OP
-			source login_user.sh
+
+
+                       		 dialog                                                      \
+                        	 --title 'Encerrar sessão'                           	     \
+                       	 	 --yesno 'Tem certeza que deseja encerrar esta sessão?'      \
+                        	0 0
+
+                        if [[ $? == 0 ]]
+                                 then
+					source login.sh
+                 fi
+
+			deslogar $1
+
+
 
 	elif [[ $OPCAO == 2 ]]
 		then
 			OP=22
 			source log.sh $OP
 
-			clear
-			echo "Good-bye..."
-			exit 0
+
+                         dialog                                                  \
+                        --title 'Sair'                                          \
+                        --yesno 'Tem certeza que deseja sair do programa?'      \
+                         0 0
+
+                        if [[ $? == 0 ]]
+                                then
+                                        clear
+                                         echo "Good-bye..."
+                                        exit 0
+                 fi
+
+		deslogar $1
 
 	else
 		source menu_user.sh $1

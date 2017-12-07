@@ -46,10 +46,12 @@ TIPO_USER=$(grep $1 users.csv | cut -d";" -f3)
 			source menu.sh $OPCAO
 
 	elif [[ $TIPO_USER == "B" ]]
-		theb
+		then
 			#Ele é usuário comum
 			cd $dir
 			source menu_user.sh $OPCAO
+else
+		echo "Erro de parâmetros"	
 fi
 
 }
@@ -71,12 +73,19 @@ VALUES=$(dialog --ok-label "Entrar"		\
 
 	if [[ $? == 1 ]]
 		then
-			dialog					\
-			--title 'Erro'				\
-			--msgbox 'Usuário ou senha inválidos.'	\
+			dialog							\
+			--title 'Sair'						\
+			--yesno 'Tem certeza que deseja sair do programa?'	\
 			0 0
+			
+			if [[ $? == 0 ]]
+				then
+					clear
+					echo "Good-bye..."
+					exit 0
+		fi		
 
-			login
+login
 fi
 	exec 3>&-
 

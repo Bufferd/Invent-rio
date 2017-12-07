@@ -25,14 +25,12 @@ cd $dir
 OPCAO=$(dialog --stdout				\
 	--title "MENU - $1"			\
 	--menu 'Escolha uma opção:'		\
-	0 0 0					\
+	0 0 0						\
 	"1" 'Listar'				\
 	"2" 'Cadastrar' 			\
-	"3" 'Editar'				\
-	"4" 'Deletar'				\
-	"5" 'Alterar localidade atual'		\
-	"6" 'Sair'				\
-	"7" 'Mais opções')
+	"3" 'Alterar localidade atual'		\
+	"4" 'Sair'				\
+	"5" 'Mais opções')
 
 if [[ $? == "1" ]]
                 then
@@ -54,11 +52,9 @@ OP7=23
 case $OPCAO in
 	1) source log.sh $OP1 ; source op1_user.sh $1 ;; #Cadastrar
 	2) source log.sh $OP2 ; source op2_user.sh $1 ;; #Fazer cadastrar patrimonio
-	3) source log.sh $OP3 ; source editar_user.sh $1 ;; #Editar
-	4) source log.sh $OP4 ; source op4_user.sh $1 ;;
-	5) source log.sh $OP5 ; source alterar_loc_user.sh $1 ;;
-	6) source log.sh $OP6 ; source deslogar_user.sh $1 ;;
-	7) source log.sh $OP7 ; source mais_opcoes_user.sh $1 ;;
+	3) source log.sh $OP5 ; source alterar_loc_user.sh $1 ;;
+	4) source log.sh $OP6 ; source deslogar_user.sh $1 ;;
+	5) source log.sh $OP7 ; source mais_opcoes_user.sh $1 ;;
 	*) invalido ; menu ;;
 esac
 
