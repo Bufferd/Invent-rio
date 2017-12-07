@@ -1,6 +1,6 @@
 #!/bin/bash
 
-desintall(){
+desinstall(){
 
 dialog									\
 	--title 'DESINSTALAÇÃO'						\
