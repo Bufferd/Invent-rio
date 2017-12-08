@@ -121,7 +121,7 @@ dialog													\
 	0 0
 
 clear
-
+exit 0
 }
 
 
