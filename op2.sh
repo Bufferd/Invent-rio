@@ -69,6 +69,16 @@ i=`expr $i + 1`
 done
 export IFS="$IFSold"
 
+if echo "$NOME" | egrep ' ' >/dev/null
+                then
+                        dialog                                                                  \
+                                --title 'Erro'                                                  \
+                                --msgbox 'Nome do usúaro não pode conter espaço!'      \
+                                0 0
+
+                                opcao $1
+fi
+
 
 if [[ $NOME == "" ]]
                 then

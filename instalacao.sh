@@ -30,7 +30,7 @@ VALUES=$(dialog --ok-label "Cadastrar"                                          
                                          echo "Good-bye..."
                                         exit 0
                  fi
-	fi
+fi
 #################################################################################
 exec 3>&-
  
@@ -48,6 +48,16 @@ i=`expr $i + 1`
 done
 export IFS="$IFSold"
 
+
+if echo "$NOME" | egrep ' ' >/dev/null
+                 then
+                        dialog                                                                  \
+                                --title 'Erro'                                                  \
+                                --msgbox 'Nome do usuário não pode conter espaço!'      \
+                                0 0
+ 
+                                usuario
+fi
 
 	if [[ $NOME == "" ]]
        	       then
