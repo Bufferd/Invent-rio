@@ -137,17 +137,19 @@ TIPO_USER=$(dialog	--stdout					\
 		A 'Usuário Administrador'	on			\
 		B 'Usuário Comum'		off			)
 
-	if [[ $? == "1" ]]
+	if [[ $? == 1 ]]
 		then
+	
 			opcao $1
 
 fi
+
 
 INFO="$NOME;$HASH_PASS;$TIPO_USER"
  
 echo $INFO >> users.csv
 
-echo $NOME >> users
+echo "$NOME" >> users
  
  dialog                                                          \
         --title 'Sucesso!'                                      \
