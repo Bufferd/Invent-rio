@@ -132,7 +132,7 @@ for x in $(cat users)
 	do
 		if [[ $x == $LOGIN ]]
 			then
-				SHAUSER=$(grep $x users.csv | cut -d";" -f2) #coloquei -x
+				SHAUSER=$(grep ^"$x;" users.csv | cut -d";" -f2) #coloquei -x
 
 
 					if [[ $SHASENHA == $SHAUSER ]]
