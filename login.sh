@@ -36,7 +36,7 @@ fi
 cd $dir/registros/
 
 
-TIPO_USER=$(grep $1 users.csv | cut -d";" -f3)
+TIPO_USER=$(grep ^"$1;" users.csv | cut -d";" -f3)
 
 
 	if [[ $TIPO_USER == "A" ]]
