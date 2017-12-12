@@ -155,7 +155,7 @@ TIPO_USER=$(dialog	--stdout					\
 		A 'Usuário Administrador'	on			\
 		B 'Usuário Comum'		off			)
 
-	if [[ $? == "1" || $? ==" 255" ]]
+	if [[ $? == "1" || $? == "255" ]]
 		then
 	
 			opcao $1
