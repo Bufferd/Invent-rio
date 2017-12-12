@@ -11,8 +11,8 @@ OPCAO=$(dialog --stdout				\
 	0 0 0					\
 	"1" 'Cadastrar localidade'		\
 	"2" 'Cadastrar item'			\
-	"3" 'Cadastrar usuário'			\
-	"4" 'Voltar'				)
+	"3" 'Cadastrar usuário'			)
+	#"4" 'Voltar'				)
 
 if [[ $? == "1" || $? == "255" ]]
                 then
@@ -183,9 +183,9 @@ opcao $1
 
 	new_user $1
 
-	elif [[ $OPCAO == "4" ]]
-		then
-			source menu.sh $1
+	#elif [[ $OPCAO == "4" ]]
+	#	then
+	#		source menu.sh $1
 
 	else
 
