@@ -241,11 +241,11 @@ info(){
 
 clear
 
-echo "Bem-vindo ao setup de instalação do inventário"
+echo "Bem-vindo ao setup de instalação do Inventário."
 echo
-echo "O setup instalará e configurará o inventário por completo em seu computador."
-echo "Esta instalação necessitará de uma conexão com a internet."
-read -p "Deseja instalar o inventário em seu sistema [S/N]?: " OPCAO
+echo "O setup irá instalar e configurar o inventário por completo em seu computador."
+echo "Esta instalação necessita de uma conexão com a internet."
+read -p "Deseja instalar o inventário em seu sistema? [S/N]: " OPCAO
 echo
 
 	if [[ $OPCAO == "s" || $OPCAO == "S" ]]
@@ -270,7 +270,7 @@ echo
 	elif [[ $OPCAO == "n" || $OPCAO == "N" ]]
 		then
 			clear
-			echo "Instalação cancelada"
+			echo "Instalação cancelada."
 			exit 0
 
 	else
