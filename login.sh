@@ -45,7 +45,7 @@ TIPO_USER=$(grep ^"$1;" users.csv | cut -d";" -f3)
 			cd $dir
 			source menu.sh $OPCAO
 
-	elif [[ $TIPO_USER == "B" || $TIPO_USER == "" ]]
+	elif [[ $TIPO_USER == "B" ]]
 		then
 			#Ele é usuário comum
 			cd $dir
