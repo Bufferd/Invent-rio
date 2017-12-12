@@ -138,6 +138,7 @@ for i in $(seq $NUMB)
 	arquivog="$dir/registros/"
 
 day=`date -d -1day |awk '{print$3}'`
+day=$[$day + 1]
 date=`date +%m/%y`
 IMOBILIZACAO="$day/$date"
 
