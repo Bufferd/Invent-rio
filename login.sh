@@ -63,7 +63,7 @@ cd $dir
 
 exec 3>&1
 VALUES=$(dialog --ok-label "Entrar"		\
-	--backtitle "Linux User Managment"	\
+	--backtitle "Linux Inventário"		\
 	--title "Login"				\
 	--form "Inventário"			\
 	15 50 0					\

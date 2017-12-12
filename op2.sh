@@ -44,7 +44,6 @@ fi
 exec 3>&1
  
 VALUES=$(dialog --ok-label "Cadastrar"				\
-	--backtitle "Linux User Managment"			\
 	--title "CADASTRAR"					\
 	--form "Entre com os dados a seguir:"			\
 	15 50 0							\

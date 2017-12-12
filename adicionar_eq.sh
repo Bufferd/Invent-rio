@@ -67,7 +67,6 @@ cd $dir/registros/$LOCALIDADE/
 exec 3>&1
 
 VALUES=$(dialog --ok-label "Cadastrar"				\
-	--backtitle "Linux User Managment"			\
 	--title "Cadastrar novo item"				\
 	--form "Entre com os dados do novo item a seguir:"	\
 	15 50 0							\
