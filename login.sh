@@ -178,6 +178,9 @@ case "$1" in
 
 		;;
 
+	pass) login
+
+		;;
 	*)
 	   if test -n "$1"
 		then
